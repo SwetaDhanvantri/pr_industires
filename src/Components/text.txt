@@ -1,0 +1,298 @@
+import React, { useState } from "react";
+import "./assets/style/Product.css";
+// import { useParams } from 'react-router-dom';
+const ProductList = () => {
+  // const { type, productName } = useParams();
+  const [products, setProducts] = useState([
+       {
+      type: "Rubber",
+      id: 1,
+      name: "High Quality Rubber O Rings",
+      pic: "/assets/img/Products/rubber-o-rings-250x250.webp",
+      color: "black",
+      size: "Standard",
+      material: "Yes",
+      brand: "All",
+      application: " Rubber Rings",
+      country: "Made in India",
+      details:
+        " For high temperature and high pressure applications, these Rubber O Rings are mounted in machines and automobiles. Under the stern supervision of our deft technical experts, offered rings are precisely manufactured with the aid of contemporary techniques using the finest quality raw material as per the set industry standards. In addition, we provide these Rubber O Rings in diverse dimensions to meet the various needs of the clients. ",
+    },
+    {
+      type: "Rubber",
+      id: 2,
+      name: "Rubber O Rings",
+      pic: "/assets/img/Products/rubber-o-rings-250x250.webp",
+      color: "black",
+      size: "Standard",
+      material: "Yes",
+      brand: "All",
+      application: " Rubber Rings",
+      country: "Made in India",
+      details:
+        " For high temperature and high pressure applications, these Rubber O Rings are mounted in machines and automobiles. Under the stern supervision of our deft technical experts, offered rings are precisely manufactured with the aid of contemporary techniques using the finest quality raw material as per the set industry standards. In addition, we provide these Rubber O Rings in diverse dimensions to meet the various needs of the clients. ",
+    
+    },
+    {
+      type: "Rubber",
+      id: 3,
+      name: "Silicone Rubber Gasket for led light",
+      pic: "/assets/img/Products/Silicone-Rubber-Gasket-for-led-light-removebg-preview.png",
+      color: "black",
+      size: "Standard",
+      material: "Yes",
+      brand: "All",
+      application: " Rubber Rings",
+      country: "Made in India",
+      details:
+        " For high temperature and high pressure applications, these Rubber O Rings are mounted in machines and automobiles. Under the stern supervision of our deft technical experts, offered rings are precisely manufactured with the aid of contemporary techniques using the finest quality raw material as per the set industry standards. In addition, we provide these Rubber O Rings in diverse dimensions to meet the various needs of the clients. ",
+    
+    },
+    {
+      type: "Rubber",
+      id: 4,
+      name: "Catheter Valve Silicone Washer",
+      pic: "/assets/img/Products/Catheter-Valve-Silicone-Washer.jpg",
+      color: "black",
+      size: "Standard",
+      material: "Yes",
+      brand: "All",
+      application: " Rubber Rings",
+      country: "Made in India",
+      details:
+        " For high temperature and high pressure applications, these Rubber O Rings are mounted in machines and automobiles. Under the stern supervision of our deft technical experts, offered rings are precisely manufactured with the aid of contemporary techniques using the finest quality raw material as per the set industry standards. In addition, we provide these Rubber O Rings in diverse dimensions to meet the various needs of the clients. ",
+    
+    },
+    {
+      type: "Plastic",
+      id: 5,
+      name: "Rubber Gasketr",
+      pic: "/assets/img/Products/Rubber-Gasket.jpg",
+      color: "black",
+      size: "Standard",
+      material: "Yes",
+      brand: "All",
+      application: " Rubber Rings",
+      country: "Made in India",
+      details:
+        " For high temperature and high pressure applications, these Rubber O Rings are mounted in machines and automobiles. Under the stern supervision of our deft technical experts, offered rings are precisely manufactured with the aid of contemporary techniques using the finest quality raw material as per the set industry standards. In addition, we provide these Rubber O Rings in diverse dimensions to meet the various needs of the clients. ",
+    
+    },
+    {
+      type: "Plastic",
+      id: 6,
+      name: "Priming Plug Rubber Washer",
+      pic: "/assets/img/Products//Priming-Plug-Rubber-Washer.jpg",
+      color: "black",
+      size: "Standard",
+      material: "Yes",
+      brand: "All",
+      application: " Rubber Rings",
+      country: "Made in India",
+      details:
+        " For high temperature and high pressure applications, these Rubber O Rings are mounted in machines and automobiles. Under the stern supervision of our deft technical experts, offered rings are precisely manufactured with the aid of contemporary techniques using the finest quality raw material as per the set industry standards. In addition, we provide these Rubber O Rings in diverse dimensions to meet the various needs of the clients. ",
+    
+    },
+    {
+      type: "Rubber",
+      id: 7,
+      name: "Water Deflectors Rubber Washer",
+      pic: "/assets/img/Products/Water-Deflectors-Rubber-Washer.jpg",
+      color: "black",
+      size: "Standard",
+      material: "Yes",
+      brand: "All",
+      application: " Rubber Rings",
+      country: "Made in India",
+      details:
+        " For high temperature and high pressure applications, these Rubber O Rings are mounted in machines and automobiles. Under the stern supervision of our deft technical experts, offered rings are precisely manufactured with the aid of contemporary techniques using the finest quality raw material as per the set industry standards. In addition, we provide these Rubber O Rings in diverse dimensions to meet the various needs of the clients. ",
+    
+    },
+    
+    {
+      type: "Plastic",
+      id: 10,
+      name: "Cable Gland",
+      pic: "/assets/img/Products/Cable-Gland.jpg",
+      color: "black",
+      size: "Standard",
+      material: "Yes",
+      brand: "All",
+      application: " Rubber Rings",
+      country: "Made in India",
+      details:
+        " For high temperature and high pressure applications, these Rubber O Rings are mounted in machines and automobiles. Under the stern supervision of our deft technical experts, offered rings are precisely manufactured with the aid of contemporary techniques using the finest quality raw material as per the set industry standards. In addition, we provide these Rubber O Rings in diverse dimensions to meet the various needs of the clients. ",
+    
+    },
+  ]);
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedType, setSelectedType] = useState(null);
+
+  const handleProductClick = (productId) => {
+    const product = products.find((p) => p.id === productId);
+    setSelectedProduct(product);
+  };
+  const handleTypeClick = (type) => {
+    setSelectedType(type);
+    setSelectedProduct(null);
+  };
+
+  const handleBackClick = () => {
+    setSelectedProduct(null);
+  };
+
+  if (selectedProduct) {
+    return (
+      <div>
+        <section className="my-pr">
+          <div className="my-product">
+            <div className="container">
+              <div className="pr-content row ">
+                <div className="col-xl-3 imgBx d-flex flex-column align-items-center text-center">
+                  <img
+                    src={selectedProduct.pic}
+                    alt="Image"
+                  />
+                  <h2 className="mt-4">{selectedProduct.name}</h2>
+                  <h5>Price: 1 INR/Piece</h5>
+                </div>
+
+                <div className="col-xl-9 col-12 details">
+                  <div className="content">
+                    <div className="d-flex flex-wrap">
+                      <div className="d-flex justify-content-between flex-wrap">
+                        <div className="mx-2">
+                          <h4>Product Details</h4>
+                          <h5>Color:{selectedProduct.color} </h5>
+                          <h5>Size: {selectedProduct.size}</h5>
+                          <h5>Material:{selectedProduct.material} </h5>
+                          <h5>
+                            Usage/Application: {selectedProduct.application}
+                          </h5>
+                          <h5>Country of Origin: {selectedProduct.country}</h5>
+                        </div>
+                        <div className="mx-2">
+                          <h4>Product Specifications</h4>
+                          <h5>Product Type:{selectedProduct.type} </h5>
+                          <h5>Usage:{selectedProduct.usage} </h5>
+                          <h5>Brand: {selectedProduct.brand}</h5>
+                        </div>
+                      </div>
+
+                      <div className="d-flex justify-content-between flex-wrap">
+                        <div className="mx-2">
+                          <h4>Price & Quantity</h4>
+                          <h5>Price Range:{selectedProduct.prange} </h5>
+                          <h5>
+                            Min-Order Quantity: {selectedProduct.minOrder}
+                          </h5>
+                          <h5>Unit of Measure: {selectedProduct.up} </h5>
+                        </div>
+
+                        <div className="mx-2">
+                          <h4>Trade Information</h4>
+                          <h5>Supply Ability:{selectedProduct.supply} </h5>
+                          <h5>Deliver Time: {selectedProduct.delivery}</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-12">
+                  <div className="container">
+                    <h4>Product Description</h4>
+                    <p>{selectedProduct.details}</p>
+                    <div>
+                      <button onClick={handleBackClick}>Back</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+ if (selectedType) {
+    const filteredProducts = products.filter((product) => product.type === selectedType);
+
+    // return (
+    //   <div>
+    //     <h2>{selectedType}</h2>
+    //     {filteredProducts.map((product) => (
+    //       <div key={product.id}>
+    //         <h3>{product.name}</h3>
+    //         <button onClick={() => handleProductClick(product.id)}>
+    //           View Details
+    //         </button>
+    //       </div>
+    //     ))}
+    //   </div>
+    // );
+  }
+//   return (
+//     <div style={{margin:"120px"}}>
+//       <h2>Product List</h2>
+//       <nav>
+//       <select onChange={(e) => handleTypeClick(e.target.value)}>
+//           <option value="">All Types</option>
+//           {Array.from(new Set(products.map((product) => product.type))).map((type) => (
+//             <option value={type} key={type}>{type} </option>
+//           ))}
+//           </select>
+//       </nav>
+//   </div>
+//   )
+  return (
+    <div>
+      <section className="ranp">
+        <div className="ranp-section d-flex flex-column justify-content-center align-items-start">
+          <h4>Our Products</h4>
+          <div className="text-ranp">
+            <h1>Rubber and Plastic components</h1>
+          </div>
+          <button className="ranp-btn btn">
+            <a href="#">
+              View all <i className="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </button>
+        </div>
+      </section>
+      <div className="container my-5">
+        <div className="row">
+          {products.map((product) => (
+            <div
+              className="col-xl-3 col-md-4 col-sm-6 col-12 product1"
+              key={product.id}
+            >
+              <div className="container">
+                <div className="card my-2">
+                  <div className="pr-img">
+                    <img
+                      className="card-img-top"
+                      src={product.pic}
+                      alt="Card image cap"
+                    />
+                  </div>
+                  <div className="card-body">
+                    <h5 className="card-title">{product.name}</h5>
+                    <div className="view-product">
+                      <button onClick={() => handleProductClick(product.id)}>
+                        View Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductList;

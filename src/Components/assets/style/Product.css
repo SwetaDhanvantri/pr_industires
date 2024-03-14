@@ -1,0 +1,147 @@
+.my-pr h2{
+    font-weight: 300;
+    color: #ce4b15;
+}
+.my-pr{
+    height: 99vh;
+    display: flex;
+    align-items: center;
+}
+
+.my-pr h4{
+    font-weight: 500;
+           font-size: 16px;
+           line-height: normal;
+           margin: 15px 0 10px 10px;
+         
+           color: #835a24;
+   
+}
+.my-pr h5{
+    font-weight: 300;
+           font-size: 14px;
+           line-height: normal;
+           margin-bottom: 5px;
+           margin-left: 10px;
+           color: #414040;
+           
+}
+.my-pr p{
+             font-weight: 200;
+           font-size: 14px;
+           line-height: 24px;
+           margin-bottom: 5px;
+           margin-left: 16px;
+           color: #414040;
+}
+.my-pr h5 .title-w{
+ margin-right: 2px;
+}
+.my-pr .imgBx{
+    padding: 0 20px;
+   
+}
+.my-pr img{
+  
+    width:  400px;
+    height: 400px;
+    object-fit: cover;
+}
+.my-pr .btn-div{
+    float: left;
+}
+.my-pr .btn-back{
+    width: 250px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: #ce4b15;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+}
+.my-pr .btn-back:hover{
+    border: 1px solid #ce4b15;
+    background-color: #fff;
+  
+    color: #ce4b15;
+}
+.view-product button:hover {
+    border: 1px solid #434141;
+    width: 100%;
+    padding: 5px;
+    color: #000;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.view-product button {
+    border: none;
+  margin-bottom: 15px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 25px;
+    color: #434141;
+    background-color: #f4f4f4;
+    /* background-color: #3b257d; */
+}
+.product1 .card{
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.product1 .card:hover{
+    border: 1px solid #cccaca;
+    box-shadow: none;
+}
+.product1 .card-title {
+   margin: 20px 0;
+    font-size: 16px;
+    /* height: 50px; */
+}
+.product1 .card-body{
+    padding: 0 15px 10px 15px;
+}
+.product1 img{
+    /* margin: 10px; */
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+.product1 .pr-img{
+    padding: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+@media only screen and (max-width: 600px) {
+    .my-pr{
+        height: auto;
+        
+    }
+}
+@media only screen and (min-width: 600px) {
+    .my-pr{
+        height: auto;
+        
+    }
+}
+@media only screen and (min-width: 768px) {
+    .my-pr{
+        height: auto;
+        
+    }
+}
+@media only screen and (min-width: 992px) {
+    .my-pr{
+        height: 99vh;
+        display: flex;
+        align-items: center;
+    }
+
+}
+@media only screen and (min-width: 1200px) {
+    .my-pr{
+        height: 99vh;
+        display: flex;
+        align-items: center;
+    }
+}
